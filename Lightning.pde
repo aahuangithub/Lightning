@@ -1,29 +1,44 @@
-int startX, startY, endX, endY;
+import java.util.*;
+List<Integer> startX= new ArrayList<Integer>();
+List<Integer> startY= new ArrayList<Integer>();
+List<Integer> endX= new ArrayList<Integer>(); 
+List<Integer> endY= new ArrayList<Integer>();
 //
 void setup()
 {
-  size(300,300);
-
-  startX=endX=0;
-  startY=endY=150;
-  strokeWeight(5);
-  
-  stroke(127);
+  size(900,900);
+  background(0);
+  startX.add(width/2);
+  endX.add(width/2);
+  startY.add(width/2);
+  endY.add(width/2);
+  strokeWeight(2);
+  frameRate(20);
+  stroke(256, 0, 0);
 }
 void draw()
 {
-	if(startX<300){
-		endX+=(int)(Math.random()*5);
-		endY+=(int)(Math.random()*11-5);
-		line(startX, startY, endX, endY);
+	background(0);
+	while(startX.get(list.size()-1)<width && startX.get(list.size()-1)>0 && !startX.isEmpty()){
+
+		endX.add(endX.getLast()+(int)(Math.random()*71-35));
+		endY.add(endY.getLast()+(int)(Math.random()*71-35));
 	}
-	startX=endX;
-	startY=endY;
+	
+	startX.clear();
+	startY.clear();
+	endX.clear();
+	endY.clear();
+ 	startX.add(mouseX);
+ 	endX.add(mouseX);
+ 	startY.add(mouseY);
+ 	endY.add(mouseY);
+ 	stroke((float)Math.random()*256, (float)Math.random()*256, (float)Math.random()*256);
+
 }
+
 void mousePressed()
 {
-  startX=endX=0;
-  startY=endY=150;
-  background(0);
+//
 }
 
