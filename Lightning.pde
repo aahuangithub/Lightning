@@ -20,8 +20,8 @@ void draw()
 {
 	background(0);
 	while(startX.get(startX.size()-1)<width && startX.get(startX.size()-1)>0 && !startX.isEmpty()){
-  startX.add(endX.getLast());
-  startY.add(endY.getLast());
+  startX.add(endX.get(endX.size()-1));
+  startY.add(endY.get(endY.size()-1));
 		endX.add(endX.getLast()+(int)(Math.random()*71-35));
 		endY.add(endY.getLast()+(int)(Math.random()*71-35));
   for (int i=0; i<endX.size-1;i++){ 
