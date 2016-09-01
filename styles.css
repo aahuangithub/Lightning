@@ -1,12 +1,13 @@
 
 body {
-    background-color: rgb(200,200,200);
-    color: rgb(0,0,0);
-    font-family: "Open Sans", sans-serif;
+    background-color: #000000;
+    color: #FAFAFA;
+    font-family: "serif";
     text-align: center;
 }
 
 #content {
+    padding-top: 30px;
     display: block;
     margin-left: auto;
     margin-right: auto
@@ -15,7 +16,9 @@ body {
 header {
 	
 }
-
+canvas{
+    border: 2px solid rgba(256, 256, 256, 0.15);
+}
 footer {
 	font-style: italic;
 	font-size: 90%;
